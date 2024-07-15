@@ -64,3 +64,4 @@ class Admin extends Controller
             return view('users');
         }
 }
+

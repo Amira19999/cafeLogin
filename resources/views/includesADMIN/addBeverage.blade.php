@@ -49,7 +49,7 @@
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="title">Title <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="text" id="title" required="required" class="form-control ">
+												<input type="text" id="title" required="required" class="form-control " name="title" >
 											</div>
 										</div>
 										<div class="item form-group">

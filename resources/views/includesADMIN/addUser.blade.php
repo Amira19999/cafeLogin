@@ -44,13 +44,13 @@
 								</div>
 								<div class="x_content">
 									<br />
-									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-
+									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="{{ route('StoreUser') }}"method="post">
+									@csrf
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Full Name <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="text" id="first-name" required="required" class="form-control ">
+												<input type="text" id="first-name" required="required" class="form-control " name="name">
 											</div>
 										</div>
 										<div class="item form-group">
@@ -74,6 +74,7 @@
 												</label>
 											</div>
 										</div>
+										
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="password">Password <span class="required">*</span>
 											</label>

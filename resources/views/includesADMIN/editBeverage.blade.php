@@ -11,7 +11,7 @@
 						</div>
 
 						<div class="title_right">
-							<div class="col-md-5 col-sm-5  form-group pull-right top_search">
+							<div class="col-md-5 col-sm-5  form-group pull-right top_search" action="{{ route('store/Beverage') }}"method="post">
 								<div class="input-group">
 									<input type="text" class="form-control" placeholder="Search for...">
 									<span class="input-group-btn">
@@ -47,6 +47,7 @@
 								<div class="x_content">
 									<br />
 									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+										@C
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="title">Title <span class="required">*</span>
 											</label>
@@ -123,7 +124,7 @@
 			<!-- footer content -->
 			<footer>
 				<div class="pull-right">
-					Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+					Gentelella - Bootstrap Admin Template by <a href="{{asset('assetsADMIN/https://colorlib.com') }}">Colorlib</a>
 				</div>
 				<div class="clearfix"></div>
 			</footer>

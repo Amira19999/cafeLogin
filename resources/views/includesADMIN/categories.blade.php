@@ -11,7 +11,7 @@
               </div>
 
               <div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search" a>
                   <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search for...">
                     <span class="input-group-btn">
@@ -59,17 +59,14 @@
 
 
                       <tbody>
+                      @foreach ($category as $row)
                         <tr>
-                          <td>Category</td>
-                          <td><img src="./images/edit.png" alt="Edit"></td>
-                          <td><img src="./images/delete.png" alt="Delete"></td>
+                          <td>{{$category->Category}}</td>
+                          <td><img src="{{asset('assetsADMIN/./images/edit.png/{{$category->id}}') }}" alt="Edit"></td>
+                          <td><img src="{{asset('assetsADMIN/./images/delete.png') }}" alt="Delete"></td>
                         </tr>
-                        <tr>
-                          <td>Category</td>
-                          <td><img src="./images/edit.png" alt="Edit"></td>
-                          <td><img src="./images/delete.png" alt="Delete"></td>
-                        </tr>
-                        
+                      
+                        @endforeach
                       </tbody>
                     </table>
                   </div>
@@ -86,7 +83,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            Gentelella - Bootstrap Admin Template by <a href="{{asset('assetsADMIN/https://colorlib.com') }}">Colorlib</a>
           </div>
           <div class="clearfix"></div>
         </footer>

@@ -63,26 +63,13 @@
 
 
                       <tbody>
+                      @foreach ($users as $row)
                         <tr>
-                          <td>1 Jan 2023</td>
-                          <td>Title</td>
-                          <td>Yes</td>
-                          <td><img src="./images/edit.png" alt="Edit"></td>
-                          <td><img src="./images/delete.png" alt="Delete"></td>
-                        </tr>
-                        <tr>
-                          <td>1 Jan 2023</td>
-                          <td>Title</td>
-                          <td>Yes</td>
-                          <td><img src="./images/edit.png" alt="Edit"></td>
-                          <td><img src="./images/delete.png" alt="Delete"></td>
-                        </tr>
-                        <tr>
-                          <td>1 Jan 2023</td>
-                          <td>Title</td>
-                          <td>Yes</td>
-                          <td><img src="./images/edit.png" alt="Edit"></td>
-                          <td><img src="./images/delete.png" alt="Delete"></td>
+                          <td>{{$row->Beverage Date}}</td>
+                          <td>{{$row->Title}} </td>
+                          <td>{{$row->Published}}</td>
+                          <td><img src="{{asset('assetsADMIN/./images/edit.png/{{$row->id}}') }}" alt="Edit"></td>
+                          <td><img src="{{asset('assetsADMIN/./images/delete.png') }}" alt="Delete"></td>
                         </tr>
                         
                       </tbody>
@@ -101,7 +88,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            Gentelella - Bootstrap Admin Template by <a href="{{asset('assetsADMIN/https://colorlib.com') }}">Colorlib</a>
           </div>
           <div class="clearfix"></div>
         </footer>

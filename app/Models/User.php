@@ -10,7 +10,7 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable implements MustverifyEmail
 {
     use HasFactory, Notifiable;
-
+    protected $table="users";
     /**
      * The attributes that are mass assignable.
      *
@@ -20,8 +20,16 @@ class User extends Authenticatable implements MustverifyEmail
         'FullName',
         'username',
         'email',
+        'Active',
         'password',
     ];
+
+    public function getActiveStatus()
+    {
+        return $this->active ? 'Yes' : 'No';
+    
+     }
+
 
     /**
      * The attributes that should be hidden for serialization.

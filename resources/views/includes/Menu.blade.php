@@ -2,13 +2,13 @@
   <nav class="tm-black-bg tm-drinks-nav">
               <ul>
                 <li>
-                  <a href="#" class="tm-tab-link active" data-id="cold">Iced Coffee</a>
+                  <a href= "{{asset('assets/ ')}}"class="tm-tab-link active" data-id="cold">Iced Coffee</a>
                 </li>
                 <li>
-                  <a href="#" class="tm-tab-link" data-id="hot">Hot Coffee</a>
+                  <a href="{{asset('assets/ ')}}" class="tm-tab-link" data-id="hot">Hot Coffee</a>
                 </li>
                 <li>
-                  <a href="#" class="tm-tab-link" data-id="juice">Fruit Juice</a>
+                  <a href="{{asset('assets/ ')}}" class="tm-tab-link" data-id="juice">Fruit Juice</a>
                 </li>
               </ul>
             </nav>
@@ -40,7 +40,7 @@
                   <img src="{{asset('assets/img/iced-latte.png')}}" alt="Image" class="tm-list-item-img">
                   <div class="tm-black-bg tm-list-item-text">
                     <h3 class="tm-list-item-name">Iced Latte<span class="tm-list-item-price">$11.50</span></h3>
-                    <p class="tm-list-item-description">Contents are organized into 3 tabs. Please <a href="https://www.tooplate.com/contact" rel="nofollow" target="_parent">contact Tooplate</a> if you have anything to ask.</p>
+                    <p class="tm-list-item-description">Contents are organized into 3 tabs. Please <a href="{{asset('assets/https://www.tooplate.com/contact')}}" rel="nofollow" target="_parent">contact Tooplate</a> if you have anything to ask.</p>
                   </div>
                 </div> 
                                        

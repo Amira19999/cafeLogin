@@ -65,7 +65,9 @@
                           <td>{{$user->username}}</td>
                           <td>{{$user->email}}</td>
                           <td>Yes</td>
-                          <td><img src="{{asset('assetsADMIN/./images/edit.png/{{$user->id}}') }}" alt="Edit"></td>
+                          <td><a href="/includesADMIN/users/edit/{{$user->id}}">
+                            <img src= "{{asset('assetsADMIN/./images/edit.png') }}" alt="Edit"></td>
+                          </a>
                         </tr> 
 
                         @endforeach

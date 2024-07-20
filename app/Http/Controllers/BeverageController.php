@@ -3,14 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Models\Beverage;
-class BeverageControlle extends Controller
+class BeverageController extends Controller
 {
+    private $columns = ['beverages'];
+
     public function index()
     {
-        $beverage =Beverage::get();
-       return view('beverage', compact('beverage'));
+        $beverages =Beverage::get();
+       return view('beverages', compact('beverages'));
     }
+
     public function create()
     {
         
@@ -19,7 +23,7 @@ class BeverageControlle extends Controller
     }
      public function store(Request $request) :RedirectResponse
      {
-         $new_beverage = new Category();
+         $new_beverage = new Beverage();
          $new_beverage->Title  = $request->title;
          $new_beverage->Content = $request->content;
          $new_beverage->Price = $request->price;
@@ -27,12 +31,9 @@ class BeverageControlle extends Controller
          $new_beverage->Category = $request->category;
          $new_beverage->save();
        
-       return redirect('category');
+       return redirect('Beverage');
      }
     
-
-
-
 
     public function edit(string $id)
 
@@ -40,12 +41,4 @@ class BeverageControlle extends Controller
         $beverage = Beverage::findOrFail($id);
         return view ('editBeverage',compact ('beverage'));
     }
-
-
-
-
-
-
-
-
 }

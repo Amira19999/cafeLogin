@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Beverag extends Model
 {
-   // use HasFactory;
+    use HasFactory;
    protected $table="beverages";
    protected $fillable = [
        'Title',

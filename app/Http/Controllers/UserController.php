@@ -35,7 +35,7 @@ class UserController extends Controller
       
 
         $new_user = new User();
-        $new_user->FullName = $request->fullName;
+        $new_user->FullName = $request->FullName;
         $new_user->username = $request->username;
         $new_user->email = $request->email;
         $new_user->password = $request->password;

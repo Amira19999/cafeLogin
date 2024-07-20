@@ -31,7 +31,7 @@ https://www.tooplate.com/view/2121-wave-cafe
                 </a>
               </li>
               <li class="tm-page-nav-item">
-                <a href="#about" class="tm-page-link">
+                <a href="{{route('viewabout')}}" class="tm-page-link">
                   <i class="fas fa-users tm-page-link-icon"></i>
                   <span>About Us</span>
                 </a>

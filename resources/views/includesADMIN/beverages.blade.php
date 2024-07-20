@@ -63,7 +63,7 @@
 
 
                       <tbody>
-                      @foreach ($users as $row)
+                      @foreach ($beverage as $row)
                         <tr>
                           <td>{{$row->Beverage Date}}</td>
                           <td>{{$row->Title}} </td>

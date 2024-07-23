@@ -58,25 +58,18 @@
                         </tr>
                       </thead>
                       <tbody>
+                      @foreach ($messages as $row)
                         <tr>
-                          <td>First Name and Last Name</td>
-                          <td>mail@example.com</td>
-                          <td><img src="./images/edit.png" alt="Edit"></td>
-                          <td><img src="./images/delete.png" alt="Delete"></td>
+                          <td>{{$row->FullName}}</td>
+                          <td>{{$row->email}}</td>
+                          <td><a href="/includesADMIN/messages/edit/{{$messages->id}}">
+                            <img src= "{{asset('assetsADMIN/./images/edit.png') }}" alt="Edit"></td>
+                          </a>
+                          <td><a href="/includesADMIN/messages/delete/{{$messages->id}}">
+                          <td><img src="{{asset('assetsADMIN/./images/delete.png')}}" alt="Delete"></td>
+                          </a>
                         </tr>
-                        <tr>
-                          <td>First Name and Last Name</td>
-                          <td>mail@example.com</td>
-                          <td><img src="./images/edit.png" alt="Edit"></td>
-                          <td><img src="./images/delete.png" alt="Delete"></td>
-                        </tr>
-                        <tr>
-                          <td>First Name and Last Name</td>
-                          <td>mail@example.com</td>
-                          <td><img src="./images/edit.png" alt="Edit"></td>
-                          <td><img src="./images/delete.png" alt="Delete"></td>
-                        </tr>
-                        
+                          @endforeach
                       </tbody>
                     </table>
                   </div>

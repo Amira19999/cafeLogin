@@ -17,16 +17,16 @@ class User extends Authenticatable implements MustverifyEmail
      * @var array<int, string>
      */
     protected $fillable = [
-        'FullName',
+        'fullname',
         'username',
         'email',
-        'Active',
+        'active',
         'password',
     ];
 
-    public function getActiveStatus()
-    {
-        return $this->active ? 'Yes' : 'No';
+     public function getActiveStatus()
+     {
+         return $this->active ? 'Yes' : 'No';
     
      }
 

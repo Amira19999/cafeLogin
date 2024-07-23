@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
- 
-
-  
-
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
@@ -65,13 +61,17 @@
                       <tbody>
                       @foreach ($beverage as $row)
                         <tr>
-                          <td>{{$row->Beverage Date}}</td>
+                          <td>{{$row->created_at}}</td>
                           <td>{{$row->Title}} </td>
                           <td>{{$row->Published}}</td>
-                          <td><img src="{{asset('assetsADMIN/./images/edit.png/{{$row->id}}') }}" alt="Edit"></td>
+                          <td><a href="/includesADMIN/beverages/edit/{{$row->id}}">
+                          <img src= "{{asset('assetsADMIN/./images/edit.png') }}" alt="Edit"></td>
+                          <td><a href="/includesADMIN/beverages/delete/{{$row->id}}">
                           <td><img src="{{asset('assetsADMIN/./images/delete.png') }}" alt="Delete"></td>
                         </tr>
                         
+                        @endforeach
+
                       </tbody>
                     </table>
                   </div>

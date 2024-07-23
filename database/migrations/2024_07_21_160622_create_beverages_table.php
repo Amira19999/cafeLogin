@@ -16,10 +16,11 @@ return new class extends Migration
             $table->string('Title');
             $table->string('Content');
             $table->string('Price', 100);
-            $table->boolean('Published');
-            $table->boolean('Special');
+            $table->boolean('Published', ['YES', 'NO'])->nullable();
+            $table->boolean('Special', ['YES', 'NO'])->nullable();
             $table->string('Image',100);
-            $table->foreignId('Category_id')->constrained('Category');;
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }

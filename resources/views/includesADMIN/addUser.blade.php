@@ -57,7 +57,7 @@
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="user-name">Username <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="text" id="user-name" name="user-name" required="required" class="form-control">
+												<input type="text" id="user-name" name="username" required="required" class="form-control">
 											</div>
 										</div>
 										<div class="item form-group">
@@ -103,7 +103,7 @@
 			<!-- footer content -->
 			<footer>
 				<div class="pull-right">
-					Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+					Gentelella - Bootstrap Admin Template by <a href="{{asset('assetsADMIN/https://colorlib.com') }}">Colorlib</a>
 				</div>
 				<div class="clearfix"></div>
 			</footer>

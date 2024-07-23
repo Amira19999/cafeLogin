@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-
-			<!-- page content -->
+  <!-- page content -->
 			<div class="right_col" role="main">
 				<div class="">
 					<div class="page-title">
@@ -11,7 +9,7 @@
 						</div>
 
 						<div class="title_right">
-							<div class="col-md-5 col-sm-5  form-group pull-right top_search" action="{{ route('StoreUser') }}"method="post">
+							<div class="col-md-5 col-sm-5  form-group pull-right top_search">
 								<div class="input-group">
 									<input type="text" class="form-control" placeholder="Search for...">
 									<span class="input-group-btn">
@@ -46,13 +44,14 @@
 								</div>
 								<div class="x_content">
 									<br />
-									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-
+									<form id="demo-form2" action="{{ route('updateUser',[$user->id])}}" method="post" data-parsley-validate class="form-horizontal form-label-left">
+										@csrf
+										@method('put')
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Full Name <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="text" id="first-name" required="required" class="form-control ">
+												<input type="text" id="first-name" value="{{$user->name}}" name="name" required="required" class="form-control " >
 											</div>
 										</div>
 										<div class="item form-group">
@@ -65,7 +64,7 @@
 										<div class="item form-group">
 											<label for="email" class="col-form-label col-md-3 col-sm-3 label-align">Email <span class="required">*</span></label>
 											<div class="col-md-6 col-sm-6 ">
-												<input id="email" class="form-control" type="email" name="email" required="required">
+												<input id="email" class="form-control" value="{{$user->email}}" type="email" name="email" required="required">
 											</div>
 										</div>
 										<div class="item form-group">

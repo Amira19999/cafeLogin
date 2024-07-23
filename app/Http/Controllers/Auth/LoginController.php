@@ -38,7 +38,9 @@ class LoginController extends Controller
         $this->middleware('auth')->only('logout');
     }
 
-     /**
+    
+
+    /**
      * login with username.
      *
      * @return string
@@ -47,7 +49,5 @@ class LoginController extends Controller
     {
         return 'username';
     }
-
-    
 
 }

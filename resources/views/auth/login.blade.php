@@ -34,7 +34,7 @@
         <div class="animate form login_form">
           <section class="login_content">
             
-                    <form method="POST" action="{{ route('users') }}">
+                    <form  action="{{ route('users') }}"method="post">
                         @csrf
                         <h1>Login Form</h1>
                         <div class="row mb-3">

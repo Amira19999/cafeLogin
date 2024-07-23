@@ -8,8 +8,8 @@ class ControllerCategories extends Controller
 {
     public function index()
     {
-        $category =Category::get();
-       return view('categories', compact('category'));
+        $categories=Category::get();
+       return view('categories', compact('categories'));
     }
 
     /**
@@ -40,6 +40,13 @@ class ControllerCategories extends Controller
         return view ('editCategory',compact ('category'));
     }
 
+    public function destroy(Request $request): RedirectResponse
+    {
+        $id = $request->id;
+       Category ::where('id', $id)->delete();                //softdelete
+        //User::where('id', $id)->forceDelete();              //force delete
+        return redirect('categories');
+    }
 
     
 }

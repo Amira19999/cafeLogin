@@ -59,15 +59,16 @@
 
 
                       <tbody>
-                      @foreach ($category as $row)
+                      @foreach ($categories as $row)
                         <tr>
-                          <td>{{$category->Category}}</td>
+                          <td>{{$row->category}}</td>
                           <td>  
-                               <td><a href="/includesADMIN/categories/edit/{{$category->id}}">
+                            <td><a href="/includesADMIN/categories/edit/{{$categories->id}}">
                             <img src= "{{asset('assetsADMIN/./images/edit.png') }}" alt="Edit"></td>
                           </a>
-                      
-                          <td><img src="{{asset('assetsADMIN/./images/delete.png') }}" alt="Delete"></td>
+                          <td><a href="/includesADMIN/categories/delete/{{$categories->id}}">
+                          <td><img src="{{asset('assetsADMIN/./images/delete.png')}}" alt="Delete"></td>
+                          </a>
                         </tr>
                       
                         @endforeach
@@ -87,7 +88,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com'>Colorlib</a>
+            Gentelella - Bootstrap Admin Template by <a href="{{asset('assetsADMINhttps://colorlib.com') }}">Colorlib</a>
           </div>
           <div class="clearfix"></div>
         </footer>

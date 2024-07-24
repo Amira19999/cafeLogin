@@ -44,7 +44,7 @@
 								</div>
 								<div class="x_content">
 									<br />
-									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="{{ route('store/Beverage') }}"method="post">
+									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="{{route('storeBeverage')}}"method="POST">
 									@csrf
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="title">Title <span class="required">*</span>

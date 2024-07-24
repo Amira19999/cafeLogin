@@ -7,16 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Beverag extends Model
 {
-    use HasFactory;
+   // use HasFactory;
    protected $table="beverages";
    protected $fillable = [
-       'Title',
-       'Content',
-       'Price',
-       'Published',
-       'Special',
-       'Image',
-       'Category',
+       'title',
+       'content',
+       'price',
+       'published',
+       'special',
+       'image',
+       'category',
       
    ];
 

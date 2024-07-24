@@ -48,7 +48,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>John Doe</h2>
+                <h2></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -118,7 +118,7 @@
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
                     <a href="{{asset('assetsADMIN/javascript:; ') }}" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                      <img src="{{asset('assetsADMIN/images/img.jpg') }}" alt="">John Doe
+                      <img src="{{asset('assetsADMIN/images/img.jpg') }}" alt="">
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item"  href="{{asset('assetsADMIN/javascript:; ') }}"> Profile</a>
@@ -141,6 +141,7 @@
                         <a class="dropdown-item">
                           <span class="image"><img src="{{asset('assetsADMIN/images/img.jpg') }}" alt="Profile Image" /></span>
                           <span>
+                            
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
                           </span>
@@ -231,7 +232,7 @@
     <script src="{{asset('assetsADMIN/vendors/pdfmake/build/vfs_fonts.js')}}"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="{{asset('assetsADMIN/build/js/custom.min.js') }}"></script>
+    <script src="{{asset('assetsADMIN/build/js/custom.min.js')}}"></script>
 
   </body>
 </html>

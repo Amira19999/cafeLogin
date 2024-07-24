@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Models\Category;
+use App\Models\Beverage;
 use Illuminate\Http\Request;
+
+
 
 class ControllerCategories extends Controller
 {
@@ -26,10 +29,10 @@ class ControllerCategories extends Controller
     public function store(Request $request) :RedirectResponse
     {
         $new_category = new Category();
-        $new_category->Category = $request->category;
+        $new_category->category= $request->category;
         $new_category->save();
        
-         return redirect('category');
+         return redirect('categories');
     }
 
     
@@ -43,8 +46,8 @@ class ControllerCategories extends Controller
     public function destroy(Request $request): RedirectResponse
     {
         $id = $request->id;
-       Category ::where('id', $id)->delete();                //softdelete
-        //User::where('id', $id)->forceDelete();              //force delete
+       Category ::where('id', $id)->delete();                
+                  
         return redirect('categories');
     }
 

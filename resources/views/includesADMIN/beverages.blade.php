@@ -59,15 +59,20 @@
 
 
                       <tbody>
-                      @foreach ($beverage as $row)
+                      @foreach ($beverages as $row)
                         <tr>
                           <td>{{$row->created_at}}</td>
                           <td>{{$row->Title}} </td>
                           <td>{{$row->Published}}</td>
-                          <td><a href="/includesADMIN/beverages/edit/{{$row->id}}">
-                          <img src= "{{asset('assetsADMIN/./images/edit.png') }}" alt="Edit"></td>
-                          <td><a href="/includesADMIN/beverages/delete/{{$row->id}}">
-                          <td><img src="{{asset('assetsADMIN/./images/delete.png') }}" alt="Delete"></td>
+
+                          <td><a href="{{route('editBeverage',$row->id)}}">
+                            <img src= "{{asset('assetsADMIN/./images/edit.png')}}" alt="Edit"></td>
+                          </a>
+                          <td><a href="{{route('deleteBeverage',$row->id)}}">
+                          <img src="{{asset('assetsADMIN/./images/delete.png')}}" alt="Delete"></td>
+                          </a>
+
+
                         </tr>
                         
                         @endforeach

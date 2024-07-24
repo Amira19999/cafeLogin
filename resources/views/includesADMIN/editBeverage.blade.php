@@ -46,13 +46,14 @@
 								</div>
 								<div class="x_content">
 									<br />
-									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"  action="{{route('updateBeverage',[$beverages->id])}}" method="POST">
 									@csrf
+									@method('put')
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="title">Title <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="text" id="title" required="required" class="form-control ">
+												<input type="text" id="title" name="title" required="required" class="form-control ">
 											</div>
 										</div>
 										<div class="item form-group">

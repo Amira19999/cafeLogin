@@ -44,7 +44,7 @@
 								</div>
 								<div class="x_content">
 									<br />
-									<form id="demo-form2" action="{{ route('updateUser',[$user->id])}}" method="post" data-parsley-validate class="form-horizontal form-label-left">
+									<form id="demo-form2" action="{{route('updateUser',[$user->id])}}" method="POST" data-parsley-validate class="form-horizontal form-label-left">
 										@csrf
 										@method('put')
 										<div class="item form-group">
@@ -103,7 +103,7 @@
 			<!-- footer content -->
 			<footer>
 				<div class="pull-right">
-					Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+					Gentelella - Bootstrap Admin Template by <a href="{{asset('assetsADMIN/https://colorlib.com') }}">Colorlib</a>
 				</div>
 				<div class="clearfix"></div>
 			</footer>

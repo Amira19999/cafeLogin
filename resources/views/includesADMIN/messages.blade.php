@@ -62,10 +62,10 @@
                         <tr>
                           <td>{{$row->FullName}}</td>
                           <td>{{$row->email}}</td>
-                          <td><a href="/includesADMIN/messages/edit/{{$messages->id}}">
+                          <td><a href="{{route('editmessage',$messages->id)}}">
                             <img src= "{{asset('assetsADMIN/./images/edit.png') }}" alt="Edit"></td>
                           </a>
-                          <td><a href="/includesADMIN/messages/delete/{{$messages->id}}">
+                          <td><a href="{{route('destroy',$messages->id)}}">
                           <td><img src="{{asset('assetsADMIN/./images/delete.png')}}" alt="Delete"></td>
                           </a>
                         </tr>

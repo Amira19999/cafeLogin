@@ -62,12 +62,12 @@
                       @foreach ($categories as $row)
                         <tr>
                           <td>{{$row->category}}</td>
-                          <td>  
-                            <td><a href="/includesADMIN/categories/edit/{{$categories->id}}">
-                            <img src= "{{asset('assetsADMIN/./images/edit.png') }}" alt="Edit"></td>
+                            
+                          <td><a href="{{route('editcategory',$row->id)}}">
+                            <img src= "{{asset('assetsADMIN/./images/edit.png')}}" alt="Edit"></td>
                           </a>
-                          <td><a href="/includesADMIN/categories/delete/{{$categories->id}}">
-                          <td><img src="{{asset('assetsADMIN/./images/delete.png')}}" alt="Delete"></td>
+                          <td><a href="{{route('delete',$row->id)}}">
+                          <img src="{{asset('assetsADMIN/./images/delete.png')}}" alt="Delete"></td>
                           </a>
                         </tr>
                       

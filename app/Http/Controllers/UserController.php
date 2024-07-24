@@ -26,13 +26,15 @@ class UserController extends Controller
         return view('addUser');
      
     }
+    
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request):RedirectResponse
     {
-       $new_user = new User();
+        
+       $new_user=new User();
         $new_user->FullName = $request->fullname;
         $new_user->username = $request->username;
         $new_user->email = $request->email;
@@ -54,15 +56,10 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edite(string $id)
     {
-        // $users =User::findOrFail($id);
-     //return view ('edituser',compact ('users'));
-
-
-
         $user = User::findOrFail($id);
-        return view('includesADMIN.edituser', compact('user'));
+        return view('edituser', compact('user'));
     
     }
 

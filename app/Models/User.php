@@ -24,11 +24,7 @@ class User extends Authenticatable implements MustverifyEmail
         'password',
     ];
 
-     public function getActiveStatus()
-     {
-         return $this->active ? 'Yes' : 'No';
-    
-     }
+   
 
 
     /**
